@@ -1,0 +1,336 @@
+/*--------------------------------------------------------------------- 
+File Name: responsive.css 
+---------------------------------------------------------------------*/
+
+@media (min-width: 1343px) and (max-width: 1500px) {
+    .slider_main {
+        height: 100%;
+    }
+    #banner1 .carousel-control-next {
+    right: 39.5%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+    .slider_main {
+        height: 100%;
+    }
+    .creative {
+        padding-left: 10px;
+    }
+    #banner1 .carousel-control-next {
+    right: 39.5%;
+    }
+    #banner1 .carousel-control-prev {
+    left: 38.9%;
+   }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .site-navbar ul li {
+    padding-right: 40px;
+    }
+    .slider_main {
+        height: 100%;
+    }
+    .creative {
+        padding-left: 10px;
+    }
+    .creative h1 {
+    font-size: 75px;
+    line-height: 86px;
+   }
+   #banner1 .carousel-control-prev, 
+   #banner1 .carousel-control-next {
+    top: 111%;
+   }
+    #banner1 .carousel-control-next {
+    right: 36.5%;
+    }
+    #banner1 .carousel-control-prev {
+    left: 36.9%;
+   }
+   .craig h3 {
+    font-size: 25px;
+    line-height: 25px;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-area {
+        padding: 23px 10px;
+    }
+   .site-navbar ul li {
+    padding-right: 18px;
+    }
+    ul.email li {
+    padding-right: 10px;
+    }
+    .slider_main {
+        height: 100%;
+    }
+    .creative {
+        padding-left: 10px;
+    }
+    .creative h1 {
+    font-size: 57px;
+    line-height: 67px;
+    }
+    .creative .read_more {
+        max-width: 240px;
+        height: 70px;
+        line-height: 70px;
+    }
+   #banner1 .carousel-control-prev, 
+   #banner1 .carousel-control-next {
+    top: 111%;
+   }
+    #banner1 .carousel-control-next {
+    right: 32%;
+    }
+    #banner1 .carousel-control-prev {
+    left: 33%;
+   }
+   .craig h3 {
+    font-size: 18px;
+    line-height: 20px;
+   }
+   .craig span {
+    font-size: 17px;
+   }
+   ul.social_icon li {
+    padding: 0 7px;
+   }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .slider_main {
+        height: 100%;
+    }
+    .di_none {
+    display: none;
+    }
+    .bt_fe::before {
+    height: 45%;
+    width: 100%;
+    }
+    .creative {
+        padding-left: 10px;
+    }
+    .titlepage h2 {
+        font-size: 42px;
+        line-height: 50px;
+    }
+       .creative h1 {
+    font-size: 81px;
+    line-height: 85px;
+}
+   .creative .read_more {
+    max-width: 185px;
+    line-height: 60px;
+    height: 60px;}
+    #banner1 .carousel-control-prev, 
+   #banner1 .carousel-control-next {
+    top: 109%;
+   }
+    #banner1 .carousel-control-next {
+    right: 37%;
+    }
+    #banner1 .carousel-control-prev {
+    left: 36%;
+   }
+   .cemara {
+    padding-top: 70px;
+   }
+    .d_none {
+        display: none !important;
+    }
+    .lightbox {
+    max-width: 484px;
+    margin: 0 auto;
+}
+.view_main {
+    max-width: 484px;
+    margin: 0 auto;
+}
+ul.menu_footer li a {
+    margin: 0 9px;
+}
+.copyright p {
+    text-align: center;
+}
+ ul.social_icon_bottom {
+    padding-top: 20px;  
+    text-align: center;
+
+}
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        z-index: 99999;
+    }
+    .site-navbar {
+    min-height: 104px;
+   }
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 61px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 99999;
+    
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+    .site-navbar ul li a {
+    padding: 14px 25px 10px 25px;
+}
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+    /* navbar css for mobile end */
+        .latest {
+    max-width: 375px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+.about .titlepage, .studio .titlepage {max-width: inherit;
+padding-bottom: 30px;}
+.studio_img {padding-right: 0;}
+}
+
+@media (max-width: 575px) {
+   .slider_main {
+        height: 100%;
+    }
+    .di_none {
+    display: none;
+    }
+     .header-area {
+        padding: 23px 10px;
+    }
+    .bt_fe::before {
+    height: 56%;
+    width: 100%;
+    }
+    .creative {
+        padding-left: 10px;
+    }
+   
+.creative h1 {
+    font-size: 60px;
+    line-height: 65px;
+}
+   .creative .read_more {
+    max-width: 185px;
+    line-height: 60px;
+    height: 60px;}
+    #banner1 .carousel-control-prev, 
+   #banner1 .carousel-control-next {
+    top: 118%;
+   }
+    #banner1 .carousel-control-next {
+    right: 25%;
+    }
+    #banner1 .carousel-control-prev {
+    left: 25%;
+   }
+   .cemara {
+    padding-top: 30px;
+   }
+    .d_none {
+        display: none !important;
+    }
+     .titlepage h2 {
+        font-size: 42px;
+        line-height: 45px;
+    }
+    .lightbox {
+    max-width: 290px;
+    margin: 0 auto;
+}
+.view_main {
+    max-width: 290px;
+    margin: 0 auto;
+}
+.satteb h3, .craig h3 {
+    font-size: 24px;
+}
+.group_form .send_btn {
+    max-width: 136px;
+}
+ul.menu_footer li a {
+    margin: 0 5px;
+}
+.copyright p {
+    text-align: center;
+}
+ ul.social_icon_bottom {
+    padding-top: 20px;  
+    text-align: center;
+
+}
+    .d_none {
+        display: none !important;
+    }
+    /* navbar css for mobile start */
+    .navbar-area {
+        margin-top: -41px;
+    }
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        z-index: 99999;
+    }
+    .site-navbar {
+        min-height: 0px;
+    }
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 20px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 99999;
+    
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+    .site-navbar ul li a {
+    padding: 14px 25px 10px 25px;
+}
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+    .main_form1 {padding: 80px 15px;}
+    .latest {
+    max-width: 375px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+.about .titlepage, .studio .titlepage {max-width: inherit;
+padding-bottom: 30px;}
+.studio_img {padding-right: 0;}
+}
