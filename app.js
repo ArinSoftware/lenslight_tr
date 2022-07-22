@@ -17,6 +17,7 @@ app.set('view engine', 'ejs');
 
 //static files middleware
 app.use(express.static('public'));
+app.use(express.json());
 
 //routes
 app.use('/', pageRoute);
