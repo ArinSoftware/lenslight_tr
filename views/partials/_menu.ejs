@@ -4,17 +4,17 @@
 
       <div class=" col-md-2 col-sm-3">
         <div class="logo">
-          <a href="index.html">lens<br><span>light</span></a>
+          <a href="/">lens<br><span>light</span></a>
         </div>
       </div>
       <div class="col-md-8 col-sm-9">
         <div class="navbar-area">
           <nav class="site-navbar">
             <ul>
-              <li><a class="active" href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a class="<%= link === 'index' && 'active' %>" href="/">Home</a></li>
+              <li><a class="<%= link === 'about' && 'active' %>" href="/about">About</a></li>
+              <li><a class="<%= link === 'photos' && 'active' %>" href="/photos">Photos</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
               <li><a href="projects.html">Projects</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html">Contact</a></li>
