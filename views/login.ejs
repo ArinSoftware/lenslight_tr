@@ -1,0 +1,45 @@
+<%- include("partials/_header") %>
+   <!-- body -->
+
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+
+      <!-- header -->
+      <%- include("partials/_menu") %>
+         <!-- end header inner -->
+         <!-- contact -->
+         <div class="contact">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 ">
+                     <div class="titlepage text_align_center">
+                        <h2>Login</h2>
+                     </div>
+                  </div>
+                  <div class="col-md-8 offset-md-2">
+                     <form id="request" class="main_form" action="users/login" method="POST">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Username" type="text" name="username">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Password" type="password" name="password">
+                           </div>
+                           <div class="col-md-12">
+                              <div class="group_form">
+                                 <button class="send_btn">Login</button>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end contact -->
+         <!-- end footer -->
+         <%- include("partials/_footer") %>
