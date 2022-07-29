@@ -1,1 +1,48 @@
-<h1>Dashboard Page</h1>
+<%- include("partials/_header") %>
+  <!-- body -->
+
+  <body class="main-layout inner_page">
+    <!-- loader  -->
+    <div class="loader_bg">
+      <div class="loader"><img src="/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+
+    <!-- header -->
+    <%- include("partials/_menu") %>
+      <!-- end header inner -->
+
+
+      <!--  customers -->
+      <div class="customers">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage text_align_center">
+                <h2>Welcome <%= user.username %>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="satteb text_align_center">
+                <p>fact that a reader will be distracted by the readable content of a page when looking at its
+                  layout. The point of using Lorem Ipsum is that itfact that a reader will be distracted by the
+                  readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                  itfact that a reader will be distracted by the readable content of a page when looking at its
+                  layout. The point of using Lorem Ipsum is that itfact that a reader will be distracted by the
+                  readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                  it
+                </p>
+                <h3>The point of using </h3>
+                <i><img src="/images/custo.jpg" alt="#" /></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end customers  -->
+
+      <!-- end footer -->
+      <%- include("partials/_footer") %>
