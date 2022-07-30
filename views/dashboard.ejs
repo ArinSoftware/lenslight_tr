@@ -40,9 +40,111 @@
               </div>
             </div>
           </div>
+
+
+          <div class="row">
+            <div class="col-md-12 text_align_center">
+              <button data-toggle="modal" data-target=".bd-example-modal-lg" type="button"
+                style=" margin-top:100px; margin-left: 50%; transform: translateX(-50%);" class="read_more"
+                href="about.html">Add New Photo</button>
+            </div>
+          </div>
+
+
         </div>
       </div>
       <!-- end customers  -->
+
+      <div class="gallery">
+        <div class="container_with">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage text_align_center">
+                <span>03</span>
+                <h2>Our gallery</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tz-gallery">
+            <div class="row">
+
+              <% for (photo of photos) { %>
+                <div class="col-lg-4 col-md-6 ma_bottom30">
+                  <div class="lightbox">
+                    <img src="/images/g1.jpg" alt="Bridge">
+                    <div class="view_main">
+                      <div class="pose">
+                        <a class="read_more" href="/photos/<%= photo._id %>"><img src="/images/ga.png" alt="#" /></a>
+                        <h3 style="padding-top:10px; padding-bottom:10px">
+                          <%= photo.name %>
+                        </h3>
+                        <p style="padding-top:10px;">
+                          <%= photo.description.substring(0, 80)+ "..." %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <% } %>
+
+                  <div class="col-md-12">
+                    <a class="plus_btn" href="gallery.html">+</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
+              <div class="row">
+                <div class="col-md-12 ">
+                  <div class="text_align_center">
+                    <h2 style="
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                    color: #D43A8E;
+                ">Add New Photo</h2>
+                  </div>
+                </div>
+                <div class="col-md-10 offset-md-1">
+                  <form id="request" class="main_form" method="POST" action="/photos">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input class="form_control" placeholder="Name" type="text" name="name">
+                      </div>
+                      <div class="col-md-12">
+                        <textarea name="description" style="height: 150px;" class="form_control"
+                          placeholder="Description" rows="5"></textarea>
+                      </div>
+
+                      <div style="margin-bottom: 20px ;" class="col-md-12">
+                        <input type="file" class="form-control-file">
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="group_form">
+                          <button class="read_more">Upload File</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- end footer -->
       <%- include("partials/_footer") %>
