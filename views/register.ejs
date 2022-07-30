@@ -27,10 +27,19 @@
                               <input class="form_control" placeholder="Username" type="text" name="username">
                            </div>
                            <div class="col-md-12">
-                              <input class="form_control" placeholder="Email" type="email" name="email">
+                              <div style="display: none;" class="alert alert-danger" id="username"></div>
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Email" type="text" name="email">
+                           </div>
+                           <div class="col-md-12">
+                              <div style="display: none;" class="alert alert-danger" id="email"></div>
                            </div>
                            <div class="col-md-12">
                               <input class="form_control" placeholder="Password" type="password" name="password">
+                           </div>
+                           <div class="col-md-12">
+                              <div style="display: none;" class="alert alert-danger" id="password"></div>
                            </div>
                            <div class="col-md-12">
                               <div class="group_form">
@@ -43,6 +52,69 @@
                </div>
             </div>
          </div>
+
+         <script>
+            const form = document.querySelector('form')
+            const emailError = document.querySelector('#email')
+            const passwordError = document.querySelector('#password')
+            const usernameError = document.querySelector('#username')
+
+            form.addEventListener("submit", async (e) => {
+               e.preventDefault();
+
+               emailError.textContent = "";
+               passwordError.textContent = "";
+               usernameError.textContent = "";
+               emailError.style.display = "none"
+               passwordError.style.display = "none"
+               usernameError.style.display = "none"
+
+               const email = form.email.value
+               const password = form.password.value
+               const username = form.username.value
+
+               try {
+                  const res = await fetch('users/register', {
+                     method: "POST",
+                     body: JSON.stringify({ email, password, username }),
+                     headers: { "Content-Type": "application/json" }
+                  })
+
+                  const data = await res.json();
+
+                  console.log("DATA", data) // {}
+
+                  if (data) {
+
+                     if (data.email) {
+                        emailError.textContent = data.email
+                        emailError.style.display = "block"
+                     }
+
+                     if (data.password) {
+                        passwordError.textContent = data.password
+                        passwordError.style.display = "block"
+                     }
+
+                     if (data.username) {
+                        usernameError.textContent = data.username
+                        usernameError.style.display = "block"
+                     }
+
+
+                  }
+
+                  if (data.user) {
+                     location.assign("/login")
+                  }
+
+               } catch (err) {
+                  console.log("ERR::", err)
+               }
+            })
+         </script>
+
+
          <!-- end contact -->
          <!-- end footer -->
          <%- include("partials/_footer") %>
