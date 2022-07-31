@@ -23,12 +23,14 @@
                         <p>
                            <%= photo.description %>
                         </p>
-                        <a class="read_more" href="about.html">Read More</a>
+                        <a class="read_more" href="about.html">
+                           Artist: <%= photo.user.username %>
+                        </a>
                      </div>
                   </div>
                   <div class="col-md-6">
                      <div class="about_img">
-                        <figure><img src="/images/about_img.png" alt="#" /></figure>
+                        <figure><img src="<%= photo.url %>" alt="<%= photo.name %>" /></figure>
                      </div>
                   </div>
                </div>
