@@ -23,7 +23,7 @@
                         <p>
                            <%= photo.description %>
                         </p>
-                        <a class="read_more" href="about.html">
+                        <a class="read_more" href="/users/<%= photo.user._id %>">
                            Artist: <%= photo.user.username %>
                         </a>
                      </div>
