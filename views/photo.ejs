@@ -30,7 +30,8 @@
 
                         <div style="margin-top: 30px ;">
                            <ul style="display: flex; justify-content: space-between;">
-                              <li><a style="min-width: 266px;" class="read_more" href="#">Update</a></li>
+                              <li><button style="min-width: 266px;" class="read_more" data-toggle="modal"
+                                    data-target="#updateModal">Update</button></li>
                               <li><a style="min-width: 266px;" class="read_more"
                                     href="/photos/<%= photo._id %>?_method=DELETE"
                                     onclick="return confirm('Do you want to delete the photo')">Delete</a></li>
@@ -42,7 +43,7 @@
                   </div>
                   <div class="col-md-6">
                      <div class="about_img">
-                        <figure><img src="<%= photo.url %>" alt="<%= photo.name %>" /></figure>
+                        <figure><img style="z-index:1 ;" src="<%= photo.url %>" alt="<%= photo.name %>" /></figure>
                      </div>
                   </div>
                </div>
@@ -50,4 +51,55 @@
          </div>
          <!-- end about -->
          <!-- end footer -->
+         <div id="updateModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <div class="text_align_center">
+                              <h2 style="
+         font-size: 30px;
+         margin-bottom: 20px;
+         color: #D43A8E;
+     ">Add New Photo</h2>
+                           </div>
+                        </div>
+                        <div class="col-md-10 offset-md-1">
+                           <form id="request" class="main_form" method="POST"
+                              action="/photos/<%= photo._id %>?_method=PUT" enctype="multipart/form-data">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <input value="<%= photo.name %>" class="form_control" placeholder="Name" type="text"
+                                       name="name">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <textarea name="description" style="height: 150px;" class="form_control"
+                                       placeholder="Description" rows="5"><%= photo.description %></textarea>
+                                 </div>
+
+                                 <div style="margin-bottom: 20px ;" class="col-md-12">
+                                    <input type="file" name="image" class="form-control-file">
+                                 </div>
+
+                                 <div class="col-md-12">
+                                    <div class="group_form">
+                                       <button class="read_more">Update Photo</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
          <%- include("partials/_footer") %>
