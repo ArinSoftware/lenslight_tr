@@ -18,8 +18,8 @@
                   <div class="row d_flex">
                      <div class="col-md-5">
                         <div class="creative">
-                           <h1>Best PHOTO GRAPHY STudio</h1>
-                           <a class="read_more" href="contact.html">Contact Us</a>
+                           <h1>LENSLIGHT</h1>
+                           <a class="read_more" href="/contact">Contact Us</a>
                         </div>
                      </div>
                      <div class="col-md-7">
@@ -38,7 +38,7 @@
                                        <div class="row d_flex">
                                           <div class="col-md-12">
                                              <div class="cemara">
-                                                <figure><img src="images/img.png" alt="#" /></figure>
+                                                <figure><img src="<%= photos[0].url %>" alt="#" /></figure>
                                              </div>
                                           </div>
                                        </div>
@@ -52,7 +52,7 @@
                                        <div class="row d_flex">
                                           <div class="col-md-12">
                                              <div class="cemara">
-                                                <figure><img src="images/img.png" alt="#" /></figure>
+                                                <figure><img src="<%= photos[1].url %>" alt="#" /></figure>
                                              </div>
                                           </div>
                                        </div>
@@ -66,7 +66,7 @@
                                        <div class="row d_flex">
                                           <div class="col-md-12">
                                              <div class="cemara">
-                                                <figure><img src="images/img.png" alt="#" /></figure>
+                                                <figure><img src="<%= photos[2].url %>" alt="#" /></figure>
                                              </div>
                                           </div>
                                        </div>
@@ -97,275 +97,67 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="titlepage text_align_center">
-                        <span>01</span>
-                        <h2>Recent Picture Shots</h2>
+                        <h2>Latest Photos</h2>
                      </div>
                   </div>
                </div>
                <div class="tz-gallery">
                   <div class="row">
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g1.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g1.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
+
+                     <% for (photo of photos) { %>
+
+                        <div class="col-lg-4 col-md-6 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="<%= photo.url %>" alt="<%= photo.name %>">
+                              <div class="view_main">
+                                 <div class="pose">
+                                    <a class="read_more" href="<%= photo.url %>"><img src="images/ga.png" alt="#" /></a>
+                                    <p>
+                                       <%= photo.description.substring(0, 80)+ "..." %>
+                                    </p>
+                                 </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g2.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g2.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g3.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g3.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g4.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g4.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g5.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g5.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g6.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g6.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g7.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g7.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g8.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g8.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6 ma_bottom30">
-                        <div class="lightbox">
-                           <img src="images/g9.jpg" alt="Bridge">
-                           <div class="view_main">
-                              <div class="pose">
-                                 <a class="read_more" href="images/g9.jpg"><img src="images/ga.png" alt="#" /></a>
-                                 <p>more-or-less normal distribution of<br> letters, as opposed to using </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-12">
-                        <a class="plus_btn" href="gallery.html">+</a>
-                     </div>
+
+
+                        <% } %>
+
                   </div>
                </div>
             </div>
          </div>
          <!-- end gallery -->
-         <!-- about -->
-         <div class="about">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="titlepage text_align_left">
-                        <span>02</span>
-                        <h2>About Us</h2>
-                        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                           'Content here, content here', making it look like readable English. Many desktop publishing
-                           packages and web page editors now use Lorem Ipsum as their default model </p>
-                        <a class="read_more" href="about.html">Read More</a>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="about_img">
-                        <figure><img src="images/about_img.png" alt="#" /></figure>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end about -->
+
          <!-- team -->
          <div class="team">
             <div class="container_with">
                <div class="row">
-                  <div class="col-md-12">
-                     <div class="titlepage text_align_center">
-                        <span>03</span>
-                        <h2>Our Team</h2>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                      <div class="team_box text_align_center">
-                        <div class="team_img">
-                           <figure><img src="images/team1.jpg" alt="#" /></figure>
-                        </div>
                         <div class="craig">
-                           <h3>CRAIG NELSON</h3>
-                           <span>PHOTOGRAPHER</span>
-                           <ul class="social_icon ">
-                              <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                              </li>
-                              <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                              <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                              </li>
-                           </ul>
+                           <h3>
+                              <%= numOfPhotos %>
+                           </h3>
+                           <span>PHOTOGRAPHS</span>
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                      <div class="team_box text_align_center">
-                        <div class="team_img">
-                           <figure><img src="images/team2.jpg" alt="#" /></figure>
-                        </div>
                         <div class="craig">
-                           <h3>JESSIE PRATT</h3>
-                           <span>PHOTOGRAPHER</span>
-                           <ul class="social_icon ">
-                              <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                              </li>
-                              <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                              <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                              </li>
-                           </ul>
+                           <h3>
+                              <%= numOfUser %>
+                           </h3>
+                           <span>USERS</span>
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-4">
-                     <div class="team_box text_align_center">
-                        <div class="team_img">
-                           <figure><img src="images/team3.jpg" alt="#" /></figure>
-                        </div>
-                        <div class="craig">
-                           <h3>PRATT</h3>
-                           <span>PHOTOGRAPHER</span>
-                           <ul class="social_icon ">
-                              <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                              </li>
-                              <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                              <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
+
                </div>
             </div>
          </div>
          <!-- end team -->
-         <!--  customers -->
-         <div class="customers">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="titlepage text_align_center">
-                        <span>04</span>
-                        <h2>What is Saying Customers</h2>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="satteb text_align_center">
-                        <p>fact that a reader will be distracted by the readable content of a page when looking at its
-                           layout. The point of using Lorem Ipsum is that itfact that a reader will be distracted by the
-                           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                           itfact that a reader will be distracted by the readable content of a page when looking at its
-                           layout. The point of using Lorem Ipsum is that itfact that a reader will be distracted by the
-                           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                           it
-                        </p>
-                        <h3>The point of using </h3>
-                        <i><img src="images/custo.jpg" alt="#" /></i>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end customers  -->
-         <!-- contact -->
-         <div class="contact">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12 ">
-                     <div class="titlepage text_align_center">
-                        <span>05</span>
-                        <h2>Requste A Call Back</h2>
-                     </div>
-                  </div>
-                  <div class="col-md-8 offset-md-2">
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Your name" type="type" name=" Name">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Phone Number" type="type" name="Phone Number">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_cont" placeholder="Message" type="type" name="message">
-                           </div>
-                           <div class="col-md-12">
-                              <div class="group_form">
-                                 <button class="send_btn">Send</button>
-                                 <button class="send_btn">Location</button>
-                              </div>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end contact -->
+
          <!-- end footer -->
          <%- include("partials/_footer") %>
